@@ -36,6 +36,27 @@ window.addEventListener('resize', function()
   init();
 });
 
+canvas.addEventListener("click", onClick, false);
+
+var color = 0
+var titelColor =[
+  '#FF5A00',
+  '#CA07E8',
+  '#097AFF',
+  '#09E833',
+  '#FFBF04',
+];
+function onClick(e) {
+  document.querySelector('h1').style.color = titelColor[color] ;
+  if (color < 4){
+    color++;
+  }
+  else{
+    color = 0;
+  }
+}
+
+
 function Circle(x, y, dx, dy, radius) {
   this.x = x;
   this.y = y;
@@ -120,5 +141,7 @@ function  animate() {
   }
 
 }
+
+
 
 animate();

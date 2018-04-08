@@ -1,11 +1,17 @@
 canvas{
   background: #595959;
+
 }
 
 body{
   margin: 0;
 }
 
-.topBox {
+h1{
+  border: 15px;
+  font-family: 'East Sea Dokdo', cursive;
+  text-align: center;
+  font-size: 2rem;
+
 
 }
