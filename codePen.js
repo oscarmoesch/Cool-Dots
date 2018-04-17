@@ -11,7 +11,7 @@ var mouse = {
 
 var maxRadius = 50;
 var minRadius = 5
-
+//hi
 var colorArray =[
   '#00585E',
   '#009494',
@@ -50,6 +50,7 @@ function onClick(e) {
   document.querySelector('h1').style.color = titelColor[color] ;
   if (color < 4){
     color++;
+    init();
   }
   else{
     color = 0;
@@ -106,8 +107,8 @@ function Circle(x, y, dx, dy, radius) {
 
 
 var circleArray = []
-
-for (var i = 0; i < 800; i++) {
+var ballNum = 500
+for (var i = 0; i < ballNum; i++) {
   var radius = Math.random() * 3 + 5;
   var x = Math.random() * (innerWidth - radius * 2) + radius;
   var y = Math.random() * (innerHeight - radius * 2) + radius;
@@ -115,12 +116,15 @@ for (var i = 0; i < 800; i++) {
   var dy = (Math.random() - 0.5) * 7;
   circleArray.push(new Circle(x, y, dx, dy, radius));
 
+  function onClick(e) {
+    ballNum += 5;
+  }
 }
 
 function init(){
 
   circleArray = [];
-  for (var i = 0; i < 950; i++) {
+  for (var i = 0; i < ballNum; i++) {
     var radius = Math.random() * 3 + 5;
     var x = Math.random() * (innerWidth - radius * 2) + radius;
     var y = Math.random() * (innerHeight - radius * 2) + radius;
